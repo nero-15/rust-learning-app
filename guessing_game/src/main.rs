@@ -13,8 +13,8 @@ fn main() {
 
     println!("You guessed: {}", guess);
 
-    let x = 5;
-    let y = 10;
-
-    println!("x = {} and y = {}", x, y);
+    // let x = 5;
+    // let y = 10;
+    //
+    // println!("x = {} and y = {}", x, y);
 }
