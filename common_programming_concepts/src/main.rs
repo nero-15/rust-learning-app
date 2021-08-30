@@ -74,8 +74,8 @@ fn main() {
     // let (x, y, z) = tup;
     // println!("The value of y is: {}", y);
 
-    let months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let a = [3; 5];// [3, 3, 3, 3, 3];
 
 
 }
