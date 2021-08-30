@@ -68,11 +68,14 @@ fn main() {
     // println!("The value of z is: {}", z);
     println!("The value of heart_eyed_cat is: {}", heart_eyed_cat);
 
-    let tup: (i32, f64, u8) = (500, 6.4, 1);
-    // println!("The value of tup is: {}", tup);//error
+    // let tup: (i32, f64, u8) = (500, 6.4, 1);
+    // // println!("The value of tup is: {}", tup);//error
+    //
+    // let (x, y, z) = tup;
+    // println!("The value of y is: {}", y);
 
-    let (x, y, z) = tup;
-    println!("The value of y is: {}", y);
+    let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
 
 
 }
