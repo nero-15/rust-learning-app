@@ -77,5 +77,9 @@ fn main() {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let a = [3; 5];// [3, 3, 3, 3, 3];
 
+    another_function();
+}
 
+fn another_function() {
+    println!("Another function.");
 }
