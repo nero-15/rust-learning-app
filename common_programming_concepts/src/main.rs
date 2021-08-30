@@ -1,4 +1,7 @@
 fn main() {
+
+    // https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
+
     // let mut x = 5;
     // println!("The value of x is: {}", x);
     // x = 6;
@@ -22,4 +25,9 @@ fn main() {
     let spaces = "   ";
     let spaces = spaces.len();
     println!("{}", spaces);
+
+    // https://doc.rust-lang.org/book/ch03-02-data-types.html
+
+    let guess: u32 = "42".parse().expect("Not a number!");
+    println!("{}", guess);
 }
