@@ -1,32 +1,41 @@
 fn main() {
+    //variables_and_mutability()
+    //data_types()
+    another_function(5);
+}
 
-    // https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x);
+}
 
-    // let mut x = 5;
-    // println!("The value of x is: {}", x);
-    // x = 6;
-    // println!("The value of x is: {}", x);
+// https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html
+fn variables_and_mutability() {
 
-    // const MAX_POINTS: u32 = 100_000;
-    // println!("{}", MAX_POINTS);
-    //
-    // let x = 5;
-    //
-    // println!("The value of x is: {}", x);
-    //
-    // let x = x + 1;
-    //
-    // println!("The value of x is: {}", x);
-    //
-    // let x = x * 2;
-    //
-    // println!("The value of x is: {}", x);
-    //
-    // let spaces = "   ";
-    // let spaces = spaces.len();
-    // println!("{}", spaces);
+    let mut x = 5;
+    println!("The value of x is: {}", x);
+    x = 6;
+    println!("The value of x is: {}", x);
 
-    // https://doc.rust-lang.org/book/ch03-02-data-types.html
+    const MAX_POINTS: u32 = 100_000;
+    println!("{}", MAX_POINTS);
+    let x = 5;
+
+    println!("The value of x is: {}", x);
+
+    let x = x + 1;
+
+    println!("The value of x is: {}", x);
+
+    let x = x * 2;
+
+    println!("The value of x is: {}", x);
+
+    let spaces = "   ";
+    let spaces = spaces.len();
+}
+
+// https://doc.rust-lang.org/book/ch03-02-data-types.html
+fn data_types() {
 
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("{}", guess);
@@ -76,10 +85,4 @@ fn main() {
 
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let a = [3; 5];// [3, 3, 3, 3, 3];
-
-    another_function();
-}
-
-fn another_function() {
-    println!("Another function.");
 }
