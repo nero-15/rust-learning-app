@@ -5,6 +5,16 @@ fn main() {
     let x = five();
 
     println!("The value of x is: {}", x);
+
+    control_flow()
+}
+
+fn control_flow() {
+    if number < 5 {
+        println!("condition was true");
+    } else {
+        println!("condition was false");
+    }
 }
 
 fn five() -> i32 {
