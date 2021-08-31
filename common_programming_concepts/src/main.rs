@@ -47,6 +47,18 @@ fn control_flow() {
     };
 
     println!("The result is {}", result);
+
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {}", result);
 }
 
 fn five() -> i32 {
