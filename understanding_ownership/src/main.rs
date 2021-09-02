@@ -4,8 +4,8 @@ fn main() {
 
     println!("{}", s); // This will print `hello, world!`
 
-    let x = 5;
-    let y = x;
+    // let x = 5;
+    // let y = x;
 
 
     // let s1 = String::from("hello");
