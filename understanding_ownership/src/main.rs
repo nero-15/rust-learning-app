@@ -31,14 +31,26 @@ fn main() {
                                     // but i32 is Copy, so it's okay to still
                                     // use x afterward
 
-    let s1 = gives_ownership();         // gives_ownership moves its return
-                                        // value into s1
-
-    let s2 = String::from("hello");     // s2 comes into scope
-
-    let s3 = takes_and_gives_back(s2);  // s2 is moved into
+    // let s1 = gives_ownership();         // gives_ownership moves its return
+    //                                     // value into s1
+    //
+    // let s2 = String::from("hello");     // s2 comes into scope
+    //
+    // let s3 = takes_and_gives_back(s2);  // s2 is moved into
                                         // takes_and_gives_back, which also
                                         // moves its return value into s3
+
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+
+    (s, length)
 }
 
 fn gives_ownership() -> String {             // gives_ownership will move its
