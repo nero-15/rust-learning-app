@@ -55,12 +55,6 @@ fn calculate_length(s: &String) -> usize {
     s.len()
 }
 
-fn calculate_length(s: String) -> (String, usize) {
-    let length = s.len(); // len() returns the length of a String
-
-    (s, length)
-}
-
 fn gives_ownership() -> String {             // gives_ownership will move its
                                              // return value into the function
                                              // that calls it
