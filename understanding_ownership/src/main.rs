@@ -59,6 +59,24 @@ fn main() {
     println!("{} and {}", r1, r2);
     let r3 = &mut s; // no problem
     println!("{}", r3);
+
+    let mut s = String::from("hello world");
+
+    let word = first_word(&s); // word will get the value 5
+
+    s.clear(); // this empties the String, making it equal to ""
+}
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
 }
 
 fn change(some_string: &mut String) {
