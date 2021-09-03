@@ -65,18 +65,24 @@ fn main() {
     let word = first_word(&s); // word will get the value 5
 
     s.clear(); // this empties the String, making it equal to ""
+
+
+    let s = String::from("hello world");
+
+    let hello = &s[0..5];
+    let world = &s[6..11];
 }
 
-fn first_word(s: &String) -> usize {
+fn first_word(s: &String) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return i;
+            return &s[0..i];
         }
     }
 
-    s.len()
+    &s[..]
 }
 
 fn change(some_string: &mut String) {
