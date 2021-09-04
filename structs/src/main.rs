@@ -33,4 +33,12 @@ fn main() {
         String::from("tokatoka")
     );
     println!("{:?}", user2);
+
+    let user3 = User {
+        email: String::from("another@example.com"),
+        username: String::from("anotherusername567"),
+        active: user1.active,
+        sign_in_count: user1.sign_in_count,
+    };
+    println!("{:?}", user3);
 }
