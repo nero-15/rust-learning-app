@@ -1,3 +1,5 @@
+#[derive(Debug)]
+
 fn main() {
     // creating_instances_from_other_instances_with_struct_update_syntax()
     example_structs()
@@ -14,6 +16,8 @@ fn example_structs(){
         height: 50,
     };
 
+    println!("rect1 is {:?}", rect1);
+
     println!(
         "The area of the rectangle is {} square pixels.",
         area(&rect1)
@@ -25,7 +29,6 @@ fn area(rectangle: &Rectangle) -> u32 {
 }
 
 fn creating_instances_from_other_instances_with_struct_update_syntax(){
-    #[derive(Debug)]
     struct User {
         username: String,
         email: String,
