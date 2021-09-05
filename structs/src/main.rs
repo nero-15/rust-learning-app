@@ -1,5 +1,20 @@
 fn main() {
-    creating_instances_from_other_instances_with_struct_update_syntax()
+    // creating_instances_from_other_instances_with_struct_update_syntax()
+    example_structs()
+}
+
+fn example_structs(){
+    let width1 = 30;
+    let height1 = 50;
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(width1, height1)
+    );
+}
+
+fn area(width: u32, height: u32) -> u32 {
+    width * height
 }
 
 fn creating_instances_from_other_instances_with_struct_update_syntax(){
