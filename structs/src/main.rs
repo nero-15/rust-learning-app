@@ -1,10 +1,9 @@
-#[derive(Debug)]
-
 fn main() {
     // creating_instances_from_other_instances_with_struct_update_syntax()
     example_structs()
 }
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -29,6 +28,7 @@ fn area(rectangle: &Rectangle) -> u32 {
 }
 
 fn creating_instances_from_other_instances_with_struct_update_syntax(){
+    #[derive(Debug)]
     struct User {
         username: String,
         email: String,
