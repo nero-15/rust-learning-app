@@ -1,12 +1,31 @@
 fn main() {
     // creating_instances_from_other_instances_with_struct_update_syntax()
-    example_structs()
+    // example_structs()
+    method_syntax()
 }
 
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn method_syntax(){
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
 }
 
 fn example_structs(){
