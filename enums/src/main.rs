@@ -37,6 +37,10 @@ enum Option<T> {
 }
 
 fn main() {
+    //defining_an_enum()
+}
+
+fn defining_an_enum(){
     let four = IpAddrKind::V4;
     let six = IpAddrKind::V6;
     println!("{:?}", four);
