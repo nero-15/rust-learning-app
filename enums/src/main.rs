@@ -38,8 +38,17 @@ enum Option<T> {
 
 fn main() {
     //defining_an_enum()
+
+    // let mut count = 0;
+    // if let Coin::Quarter(state) = coin {
+    //     println!("State quarter from {:?}!", state);
+    // } else {
+    //     count += 1;
+    // }
+    // println!(count);
 }
 
+#[derive(Debug)]
 enum Coin {
     Penny,
     Nickel,
@@ -59,30 +68,30 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 
-fn defining_an_enum(){
-    let four = IpAddrKind::V4;
-    let six = IpAddrKind::V6;
-    println!("{:?}", four);
-    println!("{:?}", six);
-
-    let home = IpAddr {
-        kind: IpAddrKind::V4,
-        address: String::from("127.0.0.1"),
-    };
-
-    let loopback = IpAddr {
-        kind: IpAddrKind::V6,
-        address: String::from("::1"),
-    };
-
-    println!("{:?}", home);
-    println!("{:?}", loopback);
-
-    let m = Message::Write(String::from("hello"));
-    m.call();
-
-    let some_number = Some(5);
-    let some_string = Some("a string");
-
-    let absent_number: Option<i32> = None;
-}
+// fn defining_an_enum(){
+//     let four = IpAddrKind::V4;
+//     let six = IpAddrKind::V6;
+//     println!("{:?}", four);
+//     println!("{:?}", six);
+//
+//     let home = IpAddr {
+//         kind: IpAddrKind::V4,
+//         address: String::from("127.0.0.1"),
+//     };
+//
+//     let loopback = IpAddr {
+//         kind: IpAddrKind::V6,
+//         address: String::from("::1"),
+//     };
+//
+//     println!("{:?}", home);
+//     println!("{:?}", loopback);
+//
+//     let m = Message::Write(String::from("hello"));
+//     m.call();
+//
+//     let some_number = Some(5);
+//     let some_string = Some("a string");
+//
+//     let absent_number: Option<i32> = None;
+// }
