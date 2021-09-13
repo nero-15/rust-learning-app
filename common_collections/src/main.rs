@@ -1,4 +1,9 @@
-fn main() {
+fn main(){
+    vectors()
+}
+
+
+fn vectors() {
     // let v: Vec<i32> = Vec::new();
     // let mut v = Vec::new();
 
@@ -46,3 +51,4 @@ fn main() {
     ];
     println!("{:?}", row);
 }
+
