@@ -21,8 +21,14 @@ fn main() {
     // let does_not_exist = &v[100];
     // let does_not_exist = v.get(100);
 
-    let v = vec![100, 32, 57];
-    for i in &v {
-        println!("{}", i);
+    // let v = vec![100, 32, 57];
+    // for i in &v {
+    //     println!("{}", i);
+    // }
+
+    let mut v = vec![100, 32, 57];
+    for i in &mut v {
+        *i += 50;
     }
+    println!("{:?}", v);
 }
