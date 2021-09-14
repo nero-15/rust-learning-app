@@ -36,6 +36,10 @@ fn strings(){
     let hello = String::from("Hola");
     println!("{}", hello);
 
+    let mut s = String::from("foo");
+    s.push_str("bar");
+    println!("{}", s);
+
 }
 
 fn vectors() {
