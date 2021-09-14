@@ -57,6 +57,10 @@ fn strings(){
         println!("{}", c);
     }
 
+    for b in "नमस्ते".bytes() {
+        println!("{}", b);
+    }
+
 }
 
 fn vectors() {
