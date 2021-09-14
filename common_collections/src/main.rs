@@ -53,6 +53,10 @@ fn strings(){
     let s = format!("{}-{}-{}", s1, s2, s3);
     println!("s is {}", s);
 
+    for c in "नमस्ते".chars() {
+        println!("{}", c);
+    }
+
 }
 
 fn vectors() {
