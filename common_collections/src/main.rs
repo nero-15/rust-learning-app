@@ -1,7 +1,19 @@
 fn main(){
     //vectors()
+    strings();
 }
 
+fn strings(){
+    // let mut s = String::new();
+    let data = "initial contents";
+
+    let s = data.to_string();
+
+    // the method also works on a literal directly:
+    let s = "initial contents".to_string();
+    println!("{}", s)
+
+}
 
 fn vectors() {
     // let v: Vec<i32> = Vec::new();
