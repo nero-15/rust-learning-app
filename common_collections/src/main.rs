@@ -13,6 +13,14 @@ fn hash_maps(){
     scores.insert(String::from("Yellow"), 50);
 
     println!("{:?}", scores);
+
+    let teams = vec![String::from("Blue"), String::from("Yellow")];
+    let initial_scores = vec![10, 50];
+
+    let mut scores: HashMap<_, _> =
+        teams.into_iter().zip(initial_scores.into_iter()).collect();
+
+    println!("{:?}", scores);
 }
 
 fn strings(){
