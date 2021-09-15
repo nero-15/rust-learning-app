@@ -21,6 +21,13 @@ fn hash_maps(){
         teams.into_iter().zip(initial_scores.into_iter()).collect();
 
     println!("{:?}", scores);
+
+    let field_name = String::from("Favorite color");
+    let field_value = String::from("Blue");
+
+    let mut map = HashMap::new();
+    map.insert(field_name, field_value);
+    println!("{:?}", map);
 }
 
 fn strings(){
