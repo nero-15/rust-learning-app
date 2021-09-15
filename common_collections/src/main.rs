@@ -40,6 +40,14 @@ fn hash_maps(){
     for (key, value) in &scores {
         println!("{}: {}", key, value);
     }
+
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+
+    scores.entry(String::from("Yellow")).or_insert(50);
+    scores.entry(String::from("Blue")).or_insert(50);
+
+    println!("{:?}", scores);
 }
 
 fn strings(){
