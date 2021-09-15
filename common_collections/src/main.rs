@@ -34,9 +34,12 @@ fn hash_maps(){
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
 
-    let team_name = String::from("Blue");
-    let score = scores.get(&team_name);
-    println!("{:?}", score);
+    // let team_name = String::from("Blue");
+    // let score = scores.get(&team_name);
+    // println!("{:?}", score);
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
+    }
 }
 
 fn strings(){
