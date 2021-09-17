@@ -6,7 +6,11 @@ fn main() {
 }
 
 fn recoverable_errors_with_result(){
-    let f u32 = File::open("hello.txt");
+    let f = File::open("hello.txt");
+    let f = match f {
+        Ok(file) => file,
+        Err(error) => panic!("Problem opening the file: {:?}", error),
+    };
 }
 
 fn unrecoverable_errors_with_panic(){
