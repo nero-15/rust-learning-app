@@ -1,9 +1,16 @@
 use std::fs::File;
 use std::io::ErrorKind;
+use std::net::IpAddr;
 
 fn main() {
     // unrecoverable_errors_with_panic() 
-    recoverable_errors_with_result()
+    // recoverable_errors_with_result()
+    to_panic_or_not_to_panic()
+}
+
+fn to_panic_or_not_to_panic(){
+    let home: IpAddr = "127.0.0.1".parse().unwrap();
+    println!("{}", home);
 }
 
 fn recoverable_errors_with_result(){
