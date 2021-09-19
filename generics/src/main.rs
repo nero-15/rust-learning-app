@@ -16,6 +16,15 @@ struct Point<T, U> {
     y: U,
 }
 
+impl<T, U> Point<T, U> {
+    fn mixup<V, W>(self, other: Point<V, W>) -> Point<T, W> {
+        Point {
+            x: self.x,
+            y: other.y,
+        }
+    }
+}
+
 fn main() {
     // let number_list = vec![34, 50, 25, 100, 65];
 
@@ -27,11 +36,18 @@ fn main() {
     // let result = largest(&char_list);
     // println!("The largest char is {}", result);
 
-    let both_integer = Point { x: 5, y: 10 };
-    let both_float = Point { x: 1.0, y: 4.0 };
-    let integer_and_float = Point { x: 5, y: 4.0 };
-    println!("{:?}", both_integer);
-    println!("{:?}", both_float);
-    println!("{:?}", integer_and_float);
+    // let both_integer = Point { x: 5, y: 10 };
+    // let both_float = Point { x: 1.0, y: 4.0 };
+    // let integer_and_float = Point { x: 5, y: 4.0 };
+    // println!("{:?}", both_integer);
+    // println!("{:?}", both_float);
+    // println!("{:?}", integer_and_float);
+
+    let p1 = Point { x: 5, y: 10.4 };
+    let p2 = Point { x: "Hello", y: 'c' };
+
+    let p3 = p1.mixup(p2);
+
+    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 
 }
