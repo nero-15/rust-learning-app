@@ -92,6 +92,11 @@ mod tests {
     fn expensive_test() {
         // code that takes an hour to run
     }
+
+    #[test]
+    fn internal() {
+        assert_eq!(4, internal_adder(2, 2));
+    }
 }
 
 #[derive(Debug)]
@@ -140,4 +145,8 @@ impl Guess {
 fn prints_and_returns_10(a: i32) -> i32 {
     println!("I got the value {}", a);
     10
+}
+
+fn internal_adder(a: i32, b: i32) -> i32 {
+    a + b
 }
