@@ -30,6 +30,13 @@ fn generate_workout(intensity: u32, random_number: u32) {
 }
 
 fn main() {
+    //closures()
+    let v1 = vec![1, 2, 3];
+
+    let v1_iter = v1.iter();
+}
+
+fn closures(){
     let simulated_user_specified_value = 10;
     let simulated_random_number = 7;
 
