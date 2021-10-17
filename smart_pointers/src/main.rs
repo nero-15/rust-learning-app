@@ -56,4 +56,12 @@ fn drop(){
         data: String::from("other stuff"),
     };
     println!("CustomSmartPointers created.");
+
+    // error↓↓
+    // let c = CustomSmartPointer {
+    //     data: String::from("some data"),
+    // };
+    // println!("CustomSmartPointer created.");
+    // c.drop();
+    // println!("CustomSmartPointer dropped before the end of main.");
 }
