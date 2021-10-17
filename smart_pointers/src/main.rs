@@ -7,7 +7,8 @@ use crate::List::{Cons, Nil};
 
 fn main() {
     //boxPointers()
-    deref() 
+    // deref() 
+    drop()
 }
 
 fn boxPointers(){
@@ -19,9 +20,13 @@ fn boxPointers(){
 
 struct MyBox<T>(T);
 
-impl<T> MyBox<T> {
-    fn new(x: T) -> MyBox<T> {
-        MyBox(x)
+use std::ops::Deref;
+
+impl<T> Deref for MyBox<T> {
+    type Target = T;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 
@@ -31,4 +36,24 @@ fn deref(){
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
+}
+
+struct CustomSmartPointer {
+    data: String,
+}
+
+impl Drop for CustomSmartPointer {
+    fn drop(&mut self) {
+        println!("Dropping CustomSmartPointer with data `{}`!", self.data);
+    }
+}
+
+fn drop(){
+    let c = CustomSmartPointer {
+        data: String::from("my stuff"),
+    };
+    let d = CustomSmartPointer {
+        data: String::from("other stuff"),
+    };
+    println!("CustomSmartPointers created.");
 }
