@@ -7,7 +7,8 @@ use crate::List::{Cons, Nil};
 
 fn main() {
     //boxPointers()
-    deref() 
+    // deref() 
+    dropFunc()
 }
 
 fn boxPointers(){
@@ -19,9 +20,13 @@ fn boxPointers(){
 
 struct MyBox<T>(T);
 
-impl<T> MyBox<T> {
-    fn new(x: T) -> MyBox<T> {
-        MyBox(x)
+use std::ops::Deref;
+
+impl<T> Deref for MyBox<T> {
+    type Target = T;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
 
@@ -32,3 +37,42 @@ fn deref(){
     assert_eq!(5, x);
     assert_eq!(5, *y);
 }
+
+struct CustomSmartPointer {
+    data: String,
+}
+
+impl Drop for CustomSmartPointer {
+    fn drop(&mut self) {
+        println!("Dropping CustomSmartPointer with data `{}`!", self.data);
+    }
+}
+
+
+use std::mem::drop;
+
+fn dropFunc(){
+    // let c = CustomSmartPointer {
+    //     data: String::from("my stuff"),
+    // };
+    // let d = CustomSmartPointer {
+    //     data: String::from("other stuff"),
+    // };
+    // println!("CustomSmartPointers created.");
+
+    // error↓↓
+    // let c = CustomSmartPointer {
+    //     data: String::from("some data"),
+    // };
+    // println!("CustomSmartPointer created.");
+    // c.drop();
+    // println!("CustomSmartPointer dropped before the end of main.");
+
+    let c = CustomSmartPointer {
+        data: String::from("some data"),
+    };
+    println!("CustomSmartPointer created.");
+    drop(c);
+    println!("CustomSmartPointer dropped before the end of main.");
+}
+
