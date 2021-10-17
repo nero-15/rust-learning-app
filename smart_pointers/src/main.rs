@@ -8,7 +8,7 @@ use crate::List::{Cons, Nil};
 fn main() {
     //boxPointers()
     // deref() 
-    drop()
+    dropFunc()
 }
 
 fn boxPointers(){
@@ -48,14 +48,17 @@ impl Drop for CustomSmartPointer {
     }
 }
 
-fn drop(){
-    let c = CustomSmartPointer {
-        data: String::from("my stuff"),
-    };
-    let d = CustomSmartPointer {
-        data: String::from("other stuff"),
-    };
-    println!("CustomSmartPointers created.");
+
+use std::mem::drop;
+
+fn dropFunc(){
+    // let c = CustomSmartPointer {
+    //     data: String::from("my stuff"),
+    // };
+    // let d = CustomSmartPointer {
+    //     data: String::from("other stuff"),
+    // };
+    // println!("CustomSmartPointers created.");
 
     // error↓↓
     // let c = CustomSmartPointer {
@@ -64,4 +67,12 @@ fn drop(){
     // println!("CustomSmartPointer created.");
     // c.drop();
     // println!("CustomSmartPointer dropped before the end of main.");
+
+    let c = CustomSmartPointer {
+        data: String::from("some data"),
+    };
+    println!("CustomSmartPointer created.");
+    drop(c);
+    println!("CustomSmartPointer dropped before the end of main.");
 }
+
