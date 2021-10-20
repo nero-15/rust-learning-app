@@ -14,6 +14,9 @@ fn message_passing(){
         tx.send(val).unwrap();
     });
 
+    let received = rx.recv().unwrap();
+    println!("Got: {}", received);
+
 }
 
 fn threads(){
