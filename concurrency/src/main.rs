@@ -2,6 +2,15 @@ use std::thread;
 use std::time::Duration;
 
 fn main() {
+    // threads() 
+    message_passing()
+}
+
+fn message_passing(){
+
+}
+
+fn threads(){
     // let handle = thread::spawn(|| {
     //     for i in 1..10 {
     //         println!("hi number {} from the spawned thread!", i);
@@ -22,5 +31,4 @@ fn main() {
     });
 
     handle.join().unwrap();
-
 }
