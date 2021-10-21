@@ -1,10 +1,23 @@
 use std::thread;
 use std::time::Duration;
 use std::sync::mpsc;
+use std::sync::Mutex;
 
 fn main() {
     // threads() 
-    message_passing()
+    // message_passing()
+    shared_state()
+}
+
+fn shared_state(){
+    let m = Mutex::new(5);
+
+    {
+        let mut num = m.lock().unwrap();
+        *num = 6;
+    }
+
+    println!("m = {:?}", m);
 }
 
 fn message_passing(){
