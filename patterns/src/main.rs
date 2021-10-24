@@ -4,14 +4,25 @@ fn main() {
 }
 
 fn pattern_syntax(){
-    let x = 1;
+    // let x = 1;
+
+    // match x {
+    //     1 => println!("one"),
+    //     2 => println!("two"),
+    //     3 => println!("three"),
+    //     _ => println!("anything"),
+    // }
+
+    let x = Some(5);
+    let y = 10;
 
     match x {
-        1 => println!("one"),
-        2 => println!("two"),
-        3 => println!("three"),
-        _ => println!("anything"),
+        Some(50) => println!("Got 50"),
+        Some(y) => println!("Matched, y = {:?}", y),
+        _ => println!("Default case, x = {:?}", x),
     }
+
+    println!("at the end: x = {:?}, y = {:?}", x, y);
 }
 
 fn print_coordinates(&(x, y): &(i32, i32)) {
