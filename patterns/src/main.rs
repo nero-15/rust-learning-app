@@ -1,5 +1,17 @@
 fn main() {
-    all_the_places_for_patterns()
+    // all_the_places_for_patterns()
+    pattern_syntax()
+}
+
+fn pattern_syntax(){
+    let x = 1;
+
+    match x {
+        1 => println!("one"),
+        2 => println!("two"),
+        3 => println!("three"),
+        _ => println!("anything"),
+    }
 }
 
 fn print_coordinates(&(x, y): &(i32, i32)) {
