@@ -107,6 +107,14 @@ fn pattern_syntax(){
             println!("Some numbers: {}, {}, {}", first, third, fifth)
         }
     }
+
+    let s = Some(String::from("Hello!"));
+
+    if let Some(_) = s {
+        println!("found a string");
+    }
+
+    println!("{:?}", s);
 }
 
 fn print_coordinates(&(x, y): &(i32, i32)) {
