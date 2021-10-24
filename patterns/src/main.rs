@@ -99,6 +99,14 @@ fn pattern_syntax(){
     }
 
     println!("setting is {:?}", setting_value);
+
+    let numbers = (2, 4, 8, 16, 32);
+
+    match numbers {
+        (first, _, third, _, fifth) => {
+            println!("Some numbers: {}, {}, {}", first, third, fifth)
+        }
+    }
 }
 
 fn print_coordinates(&(x, y): &(i32, i32)) {
