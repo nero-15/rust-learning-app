@@ -1,4 +1,12 @@
 fn main() {
+    all_the_places_for_patterns()
+}
+
+fn print_coordinates(&(x, y): &(i32, i32)) {
+    println!("Current location: ({}, {})", x, y);
+}
+
+fn all_the_places_for_patterns() {
     let favorite_color: Option<&str> = None;
     let is_tuesday = false;
     let age: Result<u8, _> = "34".parse();
@@ -35,8 +43,4 @@ fn main() {
 
     let point = (3, 5);
     print_coordinates(&point);
-}
-
-fn print_coordinates(&(x, y): &(i32, i32)) {
-    println!("Current location: ({}, {})", x, y);
 }
