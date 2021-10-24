@@ -38,6 +38,14 @@ fn pattern_syntax(){
         1..=5 => println!("one through five"),
         _ => println!("something else"),
     }
+
+    let x = 'c';
+
+    match x {
+        'a'..='j' => println!("early ASCII letter"),
+        'k'..='z' => println!("late ASCII letter"),
+        _ => println!("something else"),
+    }
 }
 
 fn print_coordinates(&(x, y): &(i32, i32)) {
