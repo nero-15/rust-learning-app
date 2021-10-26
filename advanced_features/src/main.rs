@@ -14,6 +14,10 @@ fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
     }
 }
 
+extern "C" {
+    fn abs(input: i32) -> i32;
+}
+
 fn main() {
     let mut num = 5;
 
@@ -35,6 +39,10 @@ fn main() {
     let r = address as *mut i32;
 
     let slice: &[i32] = unsafe { slice::from_raw_parts_mut(r, 10000) };
+
+    unsafe {
+        println!("Absolute value of -3 according to C: {}", abs(-3));
+    }
 
     
 }
