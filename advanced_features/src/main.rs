@@ -29,6 +29,11 @@ fn add_to_count(inc: u32) {
 }
 
 fn main() {
+    // unsafeFunc() 
+    
+}
+
+fn unsafeFunc(){
     let mut num = 5;
 
     let r1 = &num as *const i32;
@@ -61,7 +66,6 @@ fn main() {
     unsafe {
         println!("COUNTER: {}", COUNTER);
     }
-    
 }
 
 unsafe fn dangerous() {}
