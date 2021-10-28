@@ -106,7 +106,12 @@ impl fmt::Display for Wrapper {
 fn main() {
     // unsafeFunc() 
     // traitFunc()
-    types()
+    // types()
+    functions_and_closures()
+}
+
+fn functions_and_closures(){
+
 }
 
 fn types(){
