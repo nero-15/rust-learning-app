@@ -103,10 +103,26 @@ impl fmt::Display for Wrapper {
     }
 }
 
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
+    f(arg) + f(arg)
+}
+
 fn main() {
     // unsafeFunc() 
     // traitFunc()
-    types()
+    // types()
+    functions_and_closures()
+}
+
+fn functions_and_closures(){
+    let answer = do_twice(add_one, 5);
+
+    println!("The answer is: {}", answer);
+
 }
 
 fn types(){
