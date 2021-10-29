@@ -112,25 +112,22 @@ fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
 }
 
 fn main() {
-    // unsafeFunc() 
+    // unsafeFunc()
     // traitFunc()
     // types()
     // functions_and_closures()
     macros()
 }
 
-fn macros(){
+fn macros() {}
 
-}
-
-fn functions_and_closures(){
+fn functions_and_closures() {
     let answer = do_twice(add_one, 5);
 
     println!("The answer is: {}", answer);
-
 }
 
-fn types(){
+fn types() {
     type Kilometers = i32;
 
     let x: i32 = 5;
@@ -139,7 +136,7 @@ fn types(){
     println!("x + y = {}", x + y);
 }
 
-fn traitFunc(){
+fn traitFunc() {
     // assert_eq!(
     //     Point { x: 1, y: 0 } + Point { x: 2, y: 3 },
     //     Point { x: 3, y: 3 }
@@ -157,7 +154,7 @@ fn traitFunc(){
     println!("w = {}", w);
 }
 
-fn unsafeFunc(){
+fn unsafeFunc() {
     let mut num = 5;
 
     let r1 = &num as *const i32;
