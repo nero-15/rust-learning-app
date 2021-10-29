@@ -115,7 +115,12 @@ fn main() {
     // unsafeFunc() 
     // traitFunc()
     // types()
-    functions_and_closures()
+    // functions_and_closures()
+    macros()
+}
+
+fn macros(){
+
 }
 
 fn functions_and_closures(){
