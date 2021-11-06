@@ -1,4 +1,8 @@
 fn main() {
+    // primitives() 
+}
+
+fn primitives(){
     // Variables can be type annotated.
     let logical: bool = true;
 
