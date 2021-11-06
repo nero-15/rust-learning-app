@@ -1,6 +1,11 @@
 fn main() {
     // primitives() 
-    literals()
+    // literals()
+    tuples()
+}
+
+fn tuples(){
+
 }
 
 fn literals(){
