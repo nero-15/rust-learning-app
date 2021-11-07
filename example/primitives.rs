@@ -1,7 +1,12 @@
 fn main() {
     // primitives() 
     // literals()
-    tuples()
+    // tuples()
+    array()
+}
+
+fn array(){
+
 }
 
 // Tuples can be used as function arguments and as return values
